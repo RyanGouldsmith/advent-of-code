@@ -48,7 +48,7 @@ function calculatePolymersLength(polymers) {
 async function calculatePolymers() {
   let polymers = await getPolymers();
   const polymerLength = calculatePolymersLength(polymers);
-  console.log('SplitPolymer Units: ', polymerLength);
+  console.log('Polymer Length minus same character polarity: ', polymerLength);
 }
 
 async function calculateShortestPolymer() {
@@ -101,7 +101,7 @@ async function calculateShortestPolymer() {
     0
   );
 
-  console.log('Shorted String with non-duplicted characters is ', shortest);
+  console.log('Removing characters the shortest polymer is ', shortest);
 }
 
 calculatePolymers();
