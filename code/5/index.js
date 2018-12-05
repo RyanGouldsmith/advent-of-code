@@ -85,8 +85,8 @@ async function calculateShortestPolymer() {
 
   const shortest = alphabet.reduce(
     (currentShortest, currentCharacter, currentIndex) => {
-      const thing = `(?![${currentCharacter}]).`;
-      const regex = new RegExp(thing, 'gi');
+      const excludeCharacterRegex = `(?![${currentCharacter}]).`;
+      const regex = new RegExp(excludeCharacterRegex, 'gi');
       let differentCharacters = polymers.match(regex).join('');
       const length = calculatePolymersLength(differentCharacters);
 
